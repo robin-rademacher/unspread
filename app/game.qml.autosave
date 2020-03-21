@@ -49,11 +49,11 @@ ApplicationWindow {
 
 
 
-    RoundButton {
+    Button {
         x: 70
         y: 662
-        text: "\u25B6" // Unicode Character 'Play Button'
-        onClicked: textArea.readOnly = true
+       icon.source:
+       
     }
 
 
