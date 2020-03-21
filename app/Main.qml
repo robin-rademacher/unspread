@@ -1,4 +1,7 @@
-import QtQuick 2.4
+import QtQuick 2.9
 
-main {
+Rectangle {
+    id: page
+    width: 320; height: 480
+    color: "lightgray"
 }

@@ -1,16 +1,16 @@
 # -*- coding: utf-8 -*-
 
 import sys
-from PyQt5.QtWidgets import QApplication, QWidget
 
-if __name__ == '__main__':
-    
+from PyQt5.QtWidgets import QApplication
+from PyQt5.QtQuick import QQuickView
+from PyQt5.QtCore import QUrl
+
+if __name__ == "__main__":
     app = QApplication(sys.argv)
-
-    w = QWidget()
-    w.resize(250, 150)
-    w.move(300, 300)
-    w.setWindowTitle('Simple')
-    w.show()
+    view = QQuickView()
+    url = QUrl("main.qml")
+    view.setSource(url)
+    view.show()
     
     sys.exit(app.exec_())
