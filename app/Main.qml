@@ -33,6 +33,7 @@ ApplicationWindow {
         y: 199
         width: 250
         height: 300
+        mipmap: true
         fillMode: Image.PreserveAspectFit
         source: "src/img/Edgar_Pinowski.png"
     }

@@ -1,6 +1,6 @@
-from .measures import Measures
-from .stats import Stats
-from .indicators import Indicators
+from measures import Measures
+from stats import Stats
+from factors import Factors
 from PySide2.QtGui import QGuiApplication
 from PySide2.QtQml import QQmlApplicationEngine
 import os
