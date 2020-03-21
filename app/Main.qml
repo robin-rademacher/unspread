@@ -1,11 +1,18 @@
-import QtQuick 2.9
-import QtQuick.Controls 1.5
-import QtQuick.Layouts 1.3
- 
+import QtQuick 2.14
+import QtQuick.Controls 2.14
+import QtQuick.Controls.Universal 2.14
+
 ApplicationWindow {
     visible: true
-    width: 500
-    height: 250
-    title: qsTr("unspread")
-    color: "blue"
+
+    Universal.theme: Universal.Dark
+    Universal.accent: Universal.Violet
+
+    Column {
+        anchors.centerIn: parent
+
+        RadioButton { text: qsTr("Small") }
+        RadioButton { text: qsTr("Medium");  checked: true }
+        RadioButton { text: qsTr("Large") }
+    }
 }
