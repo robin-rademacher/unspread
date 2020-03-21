@@ -1,5 +1,8 @@
-from PySide2.QtQml import QQmlApplicationEngine
+from .measures import Measures
+from .stats import Stats
+from .indicators import Indicators
 from PySide2.QtGui import QGuiApplication
+from PySide2.QtQml import QQmlApplicationEngine
 import os
 import sys
 os.environ["QT_QUICK_CONTROLS_STYLE"] = "universal"
