@@ -31,41 +31,36 @@ ApplicationWindow {
         id: image
         x: 0
         y: 0
-        width: 916
-        height: 614
+        width: 875
+        height: 586
         fillMode: Image.PreserveAspectFit
         source: "src/img/Karte_Porollos.png"
 
-        Text {
-            id: clock
-            color: "#ffffff"
-            x: 25
-            y: 628
-            width: 44
-            text: qsTr("00:00:00")
-            font.pixelSize: 20
-        }
+
     }
-
-
-
-    RoundButton {
-        x: 70
-        y: 662
-        text: "\u25B6" // Unicode Character 'Play Button'
-        onClicked: textArea.readOnly = true
+    Text {
+        id: clock
+        color: "#ffffff"
+        x: 25
+        y: 618
+        width: 85
+        height: 25
+        text: qsTr("00:00:00")
+        font.pixelSize: 20
     }
 
 
     Button {
-        x: 116
-        y: 662
+        x: 25
+        y: 664
+        //source:
         text: "\u23F8" // Unicode Character 'Pause Button'
-        onClicked: textArea.readOnly = true
     }
+
+
     RoundButton {
-        x: 162
-        y: 662
+        x: 163
+        y: 664
         text: "\u23E9" // Unicode Character 'Pause Button'
         onClicked: textArea.readOnly = true
     }
