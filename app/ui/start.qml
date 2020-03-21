@@ -43,7 +43,7 @@ ApplicationWindow {
         x: 451
         y: 285
         color: "#ffffff"
-        text: qsTr("In China wurde ein neues Virus entdeckt, welches sich dort <br>in großer Geschwindigkeit ausbreitet. Virologen warnen vor <br>einer weltweiten Pandemie und raten den Ländern sich darauf <br>vorzubereiten.")
+        text: qsTr("Christian Dorsten, beratender Virologe <br>'In China wurde ein neues Virus entdeckt, welches sich dort <br>in großer Geschwindigkeit ausbreitet. Virologen warnen vor <br>einer weltweiten Pandemie und raten den Ländern sich darauf <br>vorzubereiten.'")
         font.pixelSize: 15
     }
 
