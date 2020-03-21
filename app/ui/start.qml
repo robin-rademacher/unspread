@@ -27,6 +27,8 @@ ApplicationWindow {
 //        }
     }
 
+    //Image Christian Dorsten
+
     Image {
         id: image
         x: 108
@@ -35,11 +37,13 @@ ApplicationWindow {
         height: 300
         mipmap: true
         fillMode: Image.PreserveAspectFit
-        source: "/assets/images/Edgar_Pinowski.png"
+        source: "assets/images/Edgar_Pinowski.png"
     }
 
+    //inital welcome Text
+
     Text {
-        id: element
+        id: welcometext
         x: 451
         y: 285
         color: "#ffffff"
@@ -47,13 +51,27 @@ ApplicationWindow {
         font.pixelSize: 15
     }
 
+    //continue button
+
     Button {
-        id: button
+        id: continuebutton
         x: 451
         y: 400
         text: qsTr("Weiter")
 
 
+    }
+
+    //replace Text: Introduction
+
+    Text {
+        id: introductiontext
+        x: 451
+        y: 474
+        color: "#ffffff"
+        text: qsTr("Als Regierung des Landes Parallos ist es Ihre Aufgabe die Ausbreitung <br>des Coronavirus im Land zu verhindern und einzudämmen.<br>Veranlassen Sie dazu eine Vielzahl von Maßnahmen.
+                    <br>Achten Sie dabei aber auf die Auswirkungen der Faktoren")
+        font.pixelSize: 15
     }
 }
 
