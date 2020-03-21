@@ -35,7 +35,7 @@ ApplicationWindow {
         height: 300
         mipmap: true
         fillMode: Image.PreserveAspectFit
-        source: "src/img/Edgar_Pinowski.png"
+        source: "/assets/images/Edgar_Pinowski.png"
     }
 
     Text {
