@@ -33,7 +33,7 @@ ApplicationWindow {
         width: 250
         height: 300
         fillMode: Image.PreserveAspectFit
-        source: "/src/img/Edgar_Pinowski.png"
+        source: "src/img/Edgar_Pinowski.png"
     }
 
     Text {
