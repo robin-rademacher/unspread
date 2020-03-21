@@ -1,6 +1,5 @@
-from measures import Measures
-from stats import Stats
-from factors import Factors
+from bridge.start import Start
+from bridge.game import Game
 from PySide2.QtGui import QGuiApplication
 from PySide2.QtQml import QQmlApplicationEngine
 import os
@@ -11,7 +10,8 @@ os.environ["QT_QUICK_CONTROLS_STYLE"] = "universal"
 if __name__ == "__main__":
     app = QGuiApplication(sys.argv)
     engine = QQmlApplicationEngine()
-    engine.load("Main.qml")
-
+    context = engine.rootContext()
+    context.setContextProperty("start", Start())
+    engine.load("ui/start.qml")
     engine.quit.connect(app.quit)
     sys.exit(app.exec_())
