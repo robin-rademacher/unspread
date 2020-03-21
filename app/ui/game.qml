@@ -34,6 +34,18 @@ ApplicationWindow {
         height: 586
         fillMode: Image.PreserveAspectFit
         source: "../assets/images/Karte_Porollos.png"
+
+
+        //Button Gov - Treatments
+        RoundButton {
+            id: roundButton
+            x: 420
+            y: 329
+            width: 35
+            height: 33
+            text: ""
+            visible: false
+        }
     }
 
 
@@ -78,7 +90,7 @@ ApplicationWindow {
     // right Navigation with factors
 
     Rectangle {
-        id: rectangle
+        id: factornav
         x: 804
         y: -3
         width: 328
