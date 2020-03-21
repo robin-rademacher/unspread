@@ -29,18 +29,18 @@ ApplicationWindow {
 
     Image {
         id: image
-        x: 108
-        y: 199
-        width: 250
-        height: 300
+        x: 0
+        y: 0
+        width: 922
+        height: 616
         fillMode: Image.PreserveAspectFit
-        source: "src/img/Edgar_Pinowski.png"
+        source: "src/img/Karte_Porollos.png"
     }
 
     Text {
         id: element
-        x: 451
-        y: 285
+        x: 876
+        y: 81
         color: "#ffffff"
         text: qsTr("In China wurde ein neues Virus entdeckt, welches sich dort <br>in großer Geschwindigkeit ausbreitet. Virologen warnen vor <br>einer weltweiten Pandemie und raten den Ländern sich darauf <br>vorzubereiten.")
         font.pixelSize: 15
@@ -48,8 +48,8 @@ ApplicationWindow {
 
     Button {
         id: button
-        x: 451
-        y: 400
+        x: 928
+        y: 191
         text: qsTr("Weiter")
 
 
