@@ -1,9 +1,11 @@
 # -*- coding: utf-8 -*-
 
-import sys
-
-from PySide2.QtGui import QGuiApplication
 from PySide2.QtQml import QQmlApplicationEngine
+from PySide2.QtGui import QGuiApplication
+import os
+import sys
+os.environ["QT_QUICK_CONTROLS_STYLE"] = "universal"
+
 
 if __name__ == "__main__":
     app = QGuiApplication(sys.argv)

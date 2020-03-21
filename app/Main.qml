@@ -3,16 +3,28 @@ import QtQuick.Controls 2.14
 import QtQuick.Controls.Universal 2.14
 
 ApplicationWindow {
+    id: window
+    width: 1080
+    height: 720
     visible: true
-
     Universal.theme: Universal.Dark
     Universal.accent: Universal.Violet
 
-    Column {
-        anchors.centerIn: parent
+    Grid {
+        id: grid
+        rows: 5
+        columns: 5
+        anchors.fill: parent
 
-        RadioButton { text: qsTr("Small") }
-        RadioButton { text: qsTr("Medium");  checked: true }
-        RadioButton { text: qsTr("Large") }
+        Slider {
+            id: slider
+            value: 0.5
+        }
     }
 }
+
+/*##^##
+Designer {
+    D{i:1;anchors_height:400;anchors_width:400}
+}
+##^##*/
