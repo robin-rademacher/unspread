@@ -21,23 +21,68 @@ ApplicationWindow {
         columns: 5
         anchors.fill: parent
 
-//        Slider {
-//           id: slider
-//            value: 0.5
-//        }
+
     }
+
+    // Map
 
     Image {
         id: image
-        x: 0
+        x: -30
         y: 0
         width: 875
         height: 586
         fillMode: Image.PreserveAspectFit
         source: "src/img/Karte_Porollos.png"
-
-
     }
+
+    // right Navigation with factors
+
+    Rectangle {
+        id: rectangle
+        x: 805
+        y: 0
+        width: 328
+        height: 723
+        color: "#464646"
+
+
+    // Factor 1:
+        Text {
+            id: textfactor1
+            x: 22
+            y: 38
+            width: 57
+            height: 23
+            color: "#ffffff"
+            text: qsTr("Faktor 1")
+            font.pixelSize: 12
+        }
+
+        Slider {
+            id: sliderfactor1
+            x: 102
+            y: 29
+            width: 146
+            height: 32
+            enabled: false
+            value: 0.5
+        }
+
+        Image { //Icon that shows development of Factor (increasing, stagnates,...)
+            id: imagefactor1
+            x: 270
+            y: 26
+            width: 36
+            height: 38
+            fillMode: Image.PreserveAspectFit
+            source: "qrc:/qtquickplugin/images/template_image.png"
+        }
+    }
+
+
+    // Time and Time Control
+
     Text {
         id: clock
         color: "#ffffff"
@@ -49,21 +94,25 @@ ApplicationWindow {
         font.pixelSize: 20
     }
 
-
     Button {
+        id: pausebutton
         x: 25
         y: 664
         //source:
-        text: "\u23F8" // Unicode Character 'Pause Button'
     }
-
-
-    RoundButton {
-        x: 163
+    Button {
+        id: playbutton
+        x: 25
         y: 664
-        text: "\u23E9" // Unicode Character 'Pause Button'
-        onClicked: textArea.readOnly = true
+        //source:
     }
+    Button {
+        id: fastforwardbutton
+        x: 25
+        y: 664
+        //source:
+    }
+
 
 
 }
