@@ -33,7 +33,7 @@ ApplicationWindow {
         width: 875
         height: 586
         fillMode: Image.PreserveAspectFit
-        source: "/assets/images/Karte_Porollos.png"
+        source: "../assets/images/Karte_Porollos.png"
     }
 
     // right Navigation with factors
