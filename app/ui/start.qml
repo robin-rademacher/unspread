@@ -51,6 +51,20 @@ ApplicationWindow {
         font.pixelSize: 15
     }
 
+
+    Text {
+        id: introductiontext
+        x: 451
+        y: 285
+        color: "#ffffff"
+        text: qsTr("Als Regierung des Landes Parallos ist es Ihre Aufgabe die Ausbreitung <br>des Coronavirus im Land zu verhindern und einzudämmen.<br>Veranlassen Sie dazu eine Vielzahl von Maßnahmen.
+                    <br>Achten Sie dabei aber auf die Auswirkungen der Faktoren")
+        font.pixelSize: 15
+        visible: false
+    }
+
+
+
     //continue button
 
     Button {
@@ -60,19 +74,18 @@ ApplicationWindow {
         text: qsTr("Weiter")
 
 
+
+        states: State {
+                    name: "change"; when: continuebutton.pressed == true
+                    PropertyChanges { target: welcometext; visible: false }
+                    PropertyChanges { target: introductiontext; visible: true }
+                }
+
     }
 
     //replace Text: Introduction
 
-    Text {
-        id: introductiontext
-        x: 451
-        y: 474
-        color: "#ffffff"
-        text: qsTr("Als Regierung des Landes Parallos ist es Ihre Aufgabe die Ausbreitung <br>des Coronavirus im Land zu verhindern und einzudämmen.<br>Veranlassen Sie dazu eine Vielzahl von Maßnahmen.
-                    <br>Achten Sie dabei aber auf die Auswirkungen der Faktoren")
-        font.pixelSize: 15
-    }
+
 }
 
 /*##^##
