@@ -29,31 +29,43 @@ ApplicationWindow {
 
     Image {
         id: image
-        x: 108
-        y: 199
-        width: 250
-        height: 300
+        x: 0
+        y: 0
+        width: 875
+        height: 586
         fillMode: Image.PreserveAspectFit
-        source: "src/img/Edgar_Pinowski.png"
+        source: "src/img/Karte_Porollos.png"
+
+
+    }
+    Text {
+        id: clock
+        color: "#ffffff"
+        x: 25
+        y: 618
+        width: 85
+        height: 25
+        text: qsTr("00:00:00")
+        font.pixelSize: 20
     }
 
-    Text {
-        id: element
-        x: 451
-        y: 285
-        color: "#ffffff"
-        text: qsTr("In China wurde ein neues Virus entdeckt, welches sich dort <br>in großer Geschwindigkeit ausbreitet. Virologen warnen vor <br>einer weltweiten Pandemie und raten den Ländern sich darauf <br>vorzubereiten.")
-        font.pixelSize: 15
-    }
 
     Button {
-        id: button
-        x: 451
-        y: 400
-        text: qsTr("Weiter")
-
-
+        x: 25
+        y: 664
+        //source:
+        text: "\u23F8" // Unicode Character 'Pause Button'
     }
+
+
+    RoundButton {
+        x: 163
+        y: 664
+        text: "\u23E9" // Unicode Character 'Pause Button'
+        onClicked: textArea.readOnly = true
+    }
+
+
 }
 
 /*##^##
