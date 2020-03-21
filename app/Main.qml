@@ -12,14 +12,44 @@ ApplicationWindow {
 
     Grid {
         id: grid
+        anchors.rightMargin: 0
+        anchors.bottomMargin: 0
+        anchors.leftMargin: 0
+        anchors.topMargin: 0
         rows: 5
         columns: 5
         anchors.fill: parent
 
-        Slider {
-            id: slider
-            value: 0.5
-        }
+//        Slider {
+//           id: slider
+//            value: 0.5
+//        }
+    }
+
+    Image {
+        id: image
+        x: 108
+        y: 199
+        width: 250
+        height: 300
+        fillMode: Image.PreserveAspectFit
+        source: "/src/img/Edgar_Pinowski.png"
+    }
+
+    Text {
+        id: element
+        x: 451
+        y: 285
+        text: qsTr("In China wurde ein neues Virus entdeckt, welches sich dort <br>in großer Geschwindigkeit ausbreitet. Virologen warnen vor <br>einer weltweiten Pandemie und raten den Ländern sich darauf <br>vorzubereiten.")
+        font.pixelSize: 15
+    }
+
+    Button {
+        id: button
+        x: 451
+        y: 400
+        text: qsTr("Weiter")
+
     }
 }
 
