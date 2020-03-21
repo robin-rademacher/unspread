@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 from PySide2.QtQml import QQmlApplicationEngine
 from PySide2.QtGui import QGuiApplication
 import os
