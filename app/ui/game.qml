@@ -770,8 +770,19 @@ Rectangle {
             x: 8
             y: 202
             color: "#ffffff"
-            text: qsTr("Kitas schließen ist keine Option. Ich bevorzuge <br>die österreichische Lösung")
+            text: qsTr("''Kitas schließen ist keine Option. Ich <br>bevorzuge die österreichische Lösung''")
             font.pixelSize: 15
+        }
+
+        Image {
+            id: advisorsymbol
+            x: 276
+            y: 43
+            width: 40
+            height: 40
+            source: "../assets/images/Virus_Kawaii.png"
+            fillMode: Image.PreserveAspectFit
+            mipmap: true
         }
 
     }
@@ -884,4 +895,5 @@ Rectangle {
         color: "#ffffff"
         text: app.getStockIndex()
     }
+
 }
