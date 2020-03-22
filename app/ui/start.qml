@@ -37,7 +37,7 @@ ApplicationWindow {
         height: 300
         mipmap: true
         fillMode: Image.PreserveAspectFit
-        source: "../assets/images/Christian Dorsten.png.png"
+        source: "../assets/images/Christian_Dorsten.png"
     }
 
     //inital welcome Text
