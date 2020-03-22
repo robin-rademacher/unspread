@@ -378,6 +378,8 @@ Rectangle {
     RoundButton {
         x: 1032
         y: 672
+        width: 34
+        height: 34
         text: ""
         opacity: 1
         visible: true
