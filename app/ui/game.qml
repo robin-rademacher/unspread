@@ -72,6 +72,7 @@ ApplicationWindow {
                 width: 35
                 height: 35
                 source: "../assets/images/Regierung-Button.png"
+                mipmap: true
             }
             visible: true
 
