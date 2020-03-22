@@ -42,7 +42,7 @@ Rectangle {
             y: 302
             width: 250
             height: 58
-            text: qsTr("Neus Spiel")
+            text: qsTr("Neues Spiel")
             font.pointSize: 24
             onClicked: {
                 loader.setSource("start.qml")

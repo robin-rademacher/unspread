@@ -61,7 +61,7 @@ Rectangle {
             x: 100
             y: 243
             color: "#ffffff"
-            text: qsTr("Entstanden im Rahmen des #WirVsWirus Hackaton März 2020")
+            text: qsTr("Entstanden im Rahmen des #WirVsVirus Hackaton März 2020")
             font.pixelSize: 20
         }
 
