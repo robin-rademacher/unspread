@@ -58,23 +58,16 @@ Rectangle {
         }
 
 //Dialog Measures
-        Dialog {
-            id: measures
-            title: "Maßnahmen"
-            standardButtons: Dialog.Close
-            modal: false
-            Text {
-                id: dialogmeasures
-                text: qsTr("Hallo Ich bin ein Dialog")
-            }
-            Button{
-                id: measure1
-                x: 0
-                y: 0
-                width: 60
-                height: 40
-                text: "Grenzkontrolle"
-            }
+        Popup{
+            id: popupmeasures
+            x: 50
+            y: 30
+            topInset: 0
+            leftInset: 0
+            padding: 0
+            modal: true
+            focus: true
+            Loader { source: "measures.qml" }
         }
 
         // Map
@@ -97,8 +90,8 @@ Rectangle {
                 width: 35
                 height: 35
                 onClicked: {
-                //------------------------------------------------------Open Measures
-                    measures.open()
+                //------------------------------------------------------Open Measures + Pause Game (missing)
+                    popupmeasures.open()
                 }
                 Image {
                     id: govbuttonimage
