@@ -365,6 +365,7 @@ Rectangle {
             y: 658
             width: 45
             height: 45
+            highlighted: true
             onClicked: {
                 //------------------------------------------------------Time FastForward Function
                 if (state == "normal") {
@@ -379,7 +380,7 @@ Rectangle {
             states: [
                 State {
                     name: "normal"
-                    PropertyChanges { target: fastforwardbutton; Universal.accent: Universal.Steel }
+                    //PropertyChanges { target: fastforwardbutton; Universal.accent: Universal.Steel }
                 },
                 State {
                     name: "fast";
@@ -438,7 +439,7 @@ Rectangle {
                 height: 38
                 fillMode: Image.PreserveAspectFit
                 mipmap: true
-                source: "../assets/images/neutron_neutron.png"
+                source: "../assets/images/down_down.png"
             }
 
             // Factor 2
@@ -471,7 +472,7 @@ Rectangle {
                 height: 38
                 fillMode: Image.PreserveAspectFit
                 mipmap: true
-                source: "../assets/images/neutron_neutron.png"
+                source: "../assets/images/up_up.png"
             }
             // Factor 3
             Text {
