@@ -16,7 +16,7 @@ Rectangle {
         y: 0
         width: 40
         height: 40
-        Universal.accent: Universal.Steel
+        background: "111111"
         onClicked: {
            popupmeasures.close()
         }
