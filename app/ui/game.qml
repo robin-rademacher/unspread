@@ -63,7 +63,7 @@ Rectangle {
             }
         }
 
-//Dialog Measures
+        //Dialog Measures
         Popup{
             id: popupmeasures
             x: 20
@@ -96,7 +96,7 @@ Rectangle {
                 width: 35
                 height: 35
                 onClicked: {
-                //------------------------------------------------------Open Measures + Pause Game (missing)
+                    //------------------------------------------------------Open Measures + Pause Game (missing)
                     popupmeasures.open()
                 }
                 Image {
@@ -120,7 +120,7 @@ Rectangle {
                 width: 35
                 height: 35
                 onClicked: {
-                //------------------------------------------------------Open Statistics
+                    //------------------------------------------------------Open Statistics
 
                 }
                 Image {
@@ -144,7 +144,7 @@ Rectangle {
                 width: 35
                 height: 35
                 onClicked: {
-                //------------------------------------------------------Close Harbor Function
+                    //------------------------------------------------------Close Harbor Function
                     if (state == "closed") state = "open"
                     else if (state == "open") state = "closed"
 
@@ -195,7 +195,7 @@ Rectangle {
                 width: 35
                 height: 35
                 onClicked: {
-                //------------------------------------------------------Close Airport1 Function
+                    //------------------------------------------------------Close Airport1 Function
                     if (state == "closed") state = "open"
                     else if (state == "open") state = "closed"
 
@@ -244,7 +244,7 @@ Rectangle {
                 width: 35
                 height: 35
                 onClicked: {
-                //------------------------------------------------------Close Airport2 Function
+                    //------------------------------------------------------Close Airport2 Function
                     if (state == "closed") state = "open"
                     else if (state == "open") state = "closed"
 
@@ -288,7 +288,7 @@ Rectangle {
         }
 
 
-// Time and Time Control
+        // Time and Time Control
 
         Text {
             id: dayLabel
@@ -310,7 +310,7 @@ Rectangle {
             highlighted: true
             Universal.accent: Universal.Mauve
             onClicked: {
-            //------------------------------------------------------Time Pause Function
+                //------------------------------------------------------Time Pause Function
                 if (state == "pause") {
                     state = "play"
                     timer.stop()
@@ -365,7 +365,7 @@ Rectangle {
             highlighted: true
             Universal.accent: Universal.Mauve
             onClicked: {
-            //------------------------------------------------------Time FastForward Function
+                //------------------------------------------------------Time FastForward Function
                 if (state == "normal") {
                     state = "fast"
                     timer.interval = 500
@@ -396,7 +396,7 @@ Rectangle {
             }
         }
 
-// right Navigation with Factors
+        // right Navigation with Factors
 
         Rectangle {
             id: factornav
@@ -407,7 +407,7 @@ Rectangle {
             color: "#464646"
 
 
-// Factor 1:
+            // Factor 1:
             Text {
                 id: textfactor1
                 x: 22
@@ -440,7 +440,7 @@ Rectangle {
                 source: "../assets/images/neutron_neutron.png"
             }
 
-// Factor 2
+            // Factor 2
             Text {
                 id: textfactor2
                 x: 22
@@ -472,7 +472,7 @@ Rectangle {
                 mipmap: true
                 source: "../assets/images/neutron_neutron.png"
             }
-// Factor 3
+            // Factor 3
             Text {
                 id: textfactor3
                 x: 22
@@ -505,7 +505,7 @@ Rectangle {
                 source: "../assets/images/neutron_neutron.png"
             }
 
-// Factor 4
+            // Factor 4
             Text {
                 id: textfactor4
                 x: 22
@@ -538,7 +538,7 @@ Rectangle {
                 source: "../assets/images/neutron_neutron.png"
             }
 
-//Faktor 5
+            //Faktor 5
             Text {
                 id: textfactor5
                 x: 21
@@ -571,7 +571,7 @@ Rectangle {
                 source: "../assets/images/neutron_neutron.png"
             }
 
-//Faktor 6
+            //Faktor 6
             Text {
                 id: textfactor6
                 x: 22
@@ -605,7 +605,7 @@ Rectangle {
             }
 
 
-//Faktor 7
+            //Faktor 7
             Text {
                 id: textfactor7
                 x: 22
@@ -638,7 +638,7 @@ Rectangle {
                 source: "../assets/images/neutron_neutron.png"
             }
 
-//Faktor 8
+            //Faktor 8
             Text {
                 id: textfactor8
                 x: 22
@@ -671,7 +671,7 @@ Rectangle {
                 source: "../assets/images/neutron_neutron.png"
             }
 
-//Faktor 9
+            //Faktor 9
             Text {
                 id: textfactor9
                 x: 22
@@ -711,8 +711,8 @@ Rectangle {
     }
 
     RoundButton {
-        x: 1032
-        y: 672
+        x: 14
+        y: 15
         width: 34
         height: 34
         opacity: 1
@@ -738,5 +738,145 @@ Rectangle {
         color: "#ffffff"
         text: qsTr("1")
         font.pixelSize: 25
+    }
+
+    Image {
+        id: advisor
+        x: 756
+        y: 449
+        width: 194
+        height: 198
+        mipmap: true
+        fillMode: Image.PreserveAspectFit
+        source: "../assets/images/Christian_Dorsten.png"
+
+        Text {
+            id: advisorname
+            x: 138
+            y: 19
+            color: "#ffffff"
+            text: qsTr("Christian Dorsten, Virologe")
+            font.italic: true
+            font.pixelSize: 15
+        }
+
+        Text {
+            id: advisortext
+            x: 8
+            y: 202
+            color: "#ffffff"
+            text: qsTr("Kitas schließen ist keine Option. Ich bevorzuge <br>die österreichische Lösung")
+            font.pixelSize: 15
+        }
+
+    }
+
+    Image {
+        id: alive
+        x: 200
+        y: 632
+        width: 40
+        height: 40
+        fillMode: Image.PreserveAspectFit
+        source: "qrc:/qtquickplugin/images/template_image.png"
+    }
+
+    Label {
+        id: alivenumber
+        x: 246
+        y: 645
+        color: "#ffffff"
+        text: qsTr("45000000")
+    }
+
+
+    Image {
+        id: healthy
+        x: 328
+        y: 606
+        width: 40
+        height: 40
+        fillMode: Image.PreserveAspectFit
+        source: "qrc:/qtquickplugin/images/template_image.png"
+    }
+
+    Label {
+        id: healthynumber
+        x: 374
+        y: 619
+        color: "#ffffff"
+        text: qsTr("45000000")
+    }
+
+    Image {
+        id: infected
+        x: 459
+        y: 606
+        width: 40
+        height: 40
+        fillMode: Image.PreserveAspectFit
+        source: "qrc:/qtquickplugin/images/template_image.png"
+    }
+
+    Label {
+        id: healthynumber1
+        x: 505
+        y: 619
+        color: "#ffffff"
+        text: qsTr("0")
+    }
+
+    Image {
+        id: dead
+        x: 459
+        y: 652
+        width: 40
+        height: 40
+        fillMode: Image.PreserveAspectFit
+        source: "qrc:/qtquickplugin/images/template_image.png"
+    }
+
+    Label {
+        id: deadnumber
+        x: 505
+        y: 665
+        color: "#ffffff"
+        text: qsTr("0")
+    }
+
+    Image {
+        id: imune
+        x: 328
+        y: 652
+        width: 40
+        height: 40
+        fillMode: Image.PreserveAspectFit
+        source: "qrc:/qtquickplugin/images/template_image.png"
+    }
+
+    Label {
+        id: imunenumber
+        x: 381
+        y: 665
+        color: "#ffffff"
+        text: qsTr("0")
+    }
+
+    Image {
+        id: stock
+        x: 554
+        y: 632
+        width: 40
+        height: 40
+        fillMode: Image.PreserveAspectFit
+        source: "qrc:/qtquickplugin/images/template_image.png"
+    }
+
+    Label {
+        id: stocknumber
+        x: 600
+        y: 645
+        color: "#ffffff"
+        text: qsTr("10000")
     }
 }
