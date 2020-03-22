@@ -34,6 +34,9 @@ Rectangle {
             y: 330
             width: 80
             height: 60
+            topInset: 0
+            leftInset: 0
+            padding: 0
             modal: true
             focus: true
             closePolicy: Popup.CloseOnEscape | Popup.CloseOnPressOutsideParent
@@ -42,7 +45,6 @@ Rectangle {
                 id: popupbackbutton
                 x: 0
                 y: 0
-                padding: 0
                 width: 80
                 height: 60
                 text: qsTr("Beenden?")
