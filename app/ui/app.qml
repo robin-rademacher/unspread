@@ -13,7 +13,7 @@ ApplicationWindow {
 
     Loader { 
         id: loader
-        source: "start.qml"
+        source: "menu.qml"
     }
 
 }
