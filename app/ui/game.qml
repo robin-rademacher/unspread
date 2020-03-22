@@ -312,8 +312,6 @@ Rectangle {
             y: 658
             width: 45
             height: 45
-            highlighted: true
-            Universal.accent: Universal.Steel
             onClicked: {
                 //------------------------------------------------------Time Pause Function
                 if (state == "pause") {
