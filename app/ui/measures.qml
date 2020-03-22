@@ -3,7 +3,7 @@ import QtQuick.Controls 2.14
 import QtQuick.Controls.Universal 2.14
 
 Rectangle {
-    width: 805
+    width: 734
     height: 546
     color: "#111111"
 
@@ -12,7 +12,7 @@ Rectangle {
 
     Button{
         id: closepopup
-        x: 765
+        x: 694
         y: 0
         width: 40
         height: 40
