@@ -3,6 +3,7 @@ import QtQuick.Controls 2.14
 import QtQuick.Controls.Universal 2.14
 
 Rectangle {
+    id: rectangle
     width: 1080
     height: 720
     color: "#000000"
@@ -11,8 +12,28 @@ Rectangle {
     Universal.accent: Universal.Violet
 
     Item {
-        //popoup close
+        Timer {
+            id: timer
+            interval: 1000
+            repeat: true
+            running: false
+            onTriggered: {
+                day.text = parseInt(day.text) + 1
+                app.execute("total_curfew")
+                app.update()
+                sliderfactor1.value = app.getFactor("reagents")
+                sliderfactor2.value = app.getFactor("protective_clothing")
+                sliderfactor3.value = app.getFactor("medical_personnel")
+                sliderfactor4.value = app.getFactor("morale")
+                sliderfactor5.value = app.getFactor("capacity_hospitals")
+                sliderfactor6.value = app.getFactor("safety")
+                sliderfactor7.value = app.getFactor("popularity")
+                sliderfactor8.value = app.getFactor("tranquility")
+                sliderfactor9.value = app.getFactor("distance")
+            }
+        }
 
+        //popup close
         Popup {
             id: popupclose
             x: 500
@@ -270,14 +291,14 @@ Rectangle {
 // Time and Time Control
 
         Text {
-            id: clock
+            id: dayLabel
             color: "#ffffff"
             x: 25
             y: 618
-            width: 85
-            height: 25
-            text: qsTr("00:00:00")
-            font.pixelSize: 20
+            width: 45
+            height: 34
+            text: qsTr("Tag")
+            font.pixelSize: 25
         }
 
         Button {
@@ -290,8 +311,14 @@ Rectangle {
             Universal.accent: Universal.Mauve
             onClicked: {
             //------------------------------------------------------Time Pause Function
-                if (state == "pause") state = "play"
-                else if (state == "play") state = "pause"
+                if (state == "pause") {
+                    state = "play"
+                    timer.stop()
+                }
+                else if (state == "play") {
+                    state = "pause"
+                    timer.start()
+                }
             }
             state: "play"
             states: [
@@ -339,7 +366,25 @@ Rectangle {
             Universal.accent: Universal.Mauve
             onClicked: {
             //------------------------------------------------------Time FastForward Function
+                if (state == "normal") {
+                    state = "fast"
+                    timer.interval = 500
+                } else {
+                    state = "normal"
+                    timer.interval = 1000
+                }
             }
+            state: "normal"
+            states: [
+                State {
+                    name: "normal"
+                    PropertyChanges { target: fastforwardbutton; Universal.accent: Universal.Mauve }
+                },
+                State {
+                    name: "fast";
+                    PropertyChanges { target: fastforwardbutton; Universal.accent: Universal.Green }
+                }
+            ]
             Image {
                 id: ff
                 source: "../assets/images/FastForward-Button.png"
@@ -381,7 +426,7 @@ Rectangle {
                 width: 146
                 height: 32
                 enabled: false
-                value: 0.5
+                value: app.getFactor("reagents")
             }
 
             Image { //Icon that shows development of Factor (increasing, stagnates,...)
@@ -413,7 +458,7 @@ Rectangle {
                 y: 73
                 width: 146
                 height: 32
-                value: 0.5
+                value: app.getFactor("protective_clothing")
                 enabled: false
             }
 
@@ -445,7 +490,7 @@ Rectangle {
                 y: 117
                 width: 146
                 height: 32
-                value: 0.5
+                value: app.getFactor("medical_personnel")
                 enabled: false
             }
 
@@ -478,7 +523,7 @@ Rectangle {
                 y: 161
                 width: 146
                 height: 32
-                value: 0.5
+                value: app.getFactor("morale")
                 enabled: false
             }
 
@@ -511,7 +556,7 @@ Rectangle {
                 y: 205
                 width: 146
                 height: 32
-                value: 0.5
+                value: app.getFactor("capacity_hospitals")
                 enabled: false
             }
 
@@ -544,7 +589,7 @@ Rectangle {
                 y: 249
                 width: 146
                 height: 32
-                value: 0.5
+                value: app.getFactor("safety")
                 enabled: false
             }
 
@@ -578,7 +623,7 @@ Rectangle {
                 y: 293
                 width: 146
                 height: 32
-                value: 0.5
+                value: app.getFactor("popularity")
                 enabled: false
             }
 
@@ -611,7 +656,7 @@ Rectangle {
                 y: 337
                 width: 146
                 height: 32
-                value: 0.5
+                value: app.getFactor("tranquility")
                 enabled: false
             }
 
@@ -644,7 +689,7 @@ Rectangle {
                 y: 381
                 width: 146
                 height: 32
-                value: 0.5
+                value: app.getFactor("distance")
                 enabled: false
             }
 
@@ -682,5 +727,16 @@ Rectangle {
             height: 34
             mipmap: true
         }
+    }
+
+    Text {
+        id: day
+        x: 90
+        y: 619
+        width: 41
+        height: 28
+        color: "#ffffff"
+        text: qsTr("1")
+        font.pixelSize: 25
     }
 }

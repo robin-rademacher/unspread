@@ -1,4 +1,4 @@
-from factors import Factors
+from model.factors import Factors
 
 
 class Measures:
@@ -59,8 +59,9 @@ class Measures:
          "changes": [3, 0, 0, 0, 0, 0, 1, 0, 0]},
     ]
 
-    def execute_measure(self, name):
-        for measure in self.measures:
+    @staticmethod
+    def execute_measure(name):
+        for measure in Measures.measures:
             if name == measure["name"]:
                 selected_measure = measure
                 break

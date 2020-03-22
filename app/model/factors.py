@@ -12,28 +12,33 @@ class Factors:
         {"id": 9, "name": "distance", "value": -2, "previous": -2}
     ]
 
-    def get(self, name):
-        for factor in self.factors:
+    @staticmethod
+    def get(name):
+        for factor in Factors.factors:
             if name == factor["name"]:
                 return factor["value"]
 
-    def get_previous(self, name):
-        for factor in self.factors:
+    @staticmethod
+    def get_previous(name):
+        for factor in Factors.factors:
             if name == factor["name"]:
                 return factor["previous"]
 
-    def cut(self):
-        for factor in self.factors:
+    @staticmethod
+    def cut():
+        for factor in Factors.factors:
             if factor["value"] < -5:
                 factor["value"] = -5
             if factor["value"] > 5:
                 factor["value"] = 5
 
-    def apply(self, changes, sign):
-        for i, factor in enumerate(self.factors):
+    @staticmethod
+    def apply(changes, sign):
+        for i, factor in enumerate(Factors.factors):
             factor["value"] += sign * changes[i]
-        cut()
+        Factors.cut()
 
-    def save(self):
-        for factor in self.factors:
+    @staticmethod
+    def save():
+        for factor in Factors.factors:
             factor["previous"] = factor["value"]
