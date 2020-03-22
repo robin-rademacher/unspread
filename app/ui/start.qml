@@ -2,33 +2,8 @@ import QtQuick 2.14
 import QtQuick.Controls 2.14
 import QtQuick.Controls.Universal 2.14
 
-ApplicationWindow {
-    id: window
-    width: 1080
-    height: 720
-    color: "#000000"
-    visible: true
-    Universal.theme: Universal.Dark
-    Universal.accent: Universal.Violet
-
-    Grid {
-        id: grid
-        anchors.rightMargin: 0
-        anchors.bottomMargin: 0
-        anchors.leftMargin: 0
-        anchors.topMargin: 0
-        rows: 5
-        columns: 5
-        anchors.fill: parent
-
-//        Slider {
-//           id: slider
-//            value: 0.5
-//        }
-    }
-
+Item {
     //Image Christian Dorsten
-
     Image {
         id: image
         x: 108
@@ -39,9 +14,7 @@ ApplicationWindow {
         fillMode: Image.PreserveAspectFit
         source: "../assets/images/Christian_Dorsten.png"
     }
-
-    //inital welcome Text
-
+    //initial welcome Text
     Text {
         id: welcometext
         x: 451
@@ -72,7 +45,10 @@ ApplicationWindow {
         x: 451
         y: 400
         text: qsTr("Weiter")
-        onClicked: { state = (state == "welcome") ? "introduction" : "welcome" }
+        onClicked: {
+            if (state == "welcome") state = "introduction"
+            else if (state == "introduction") loader.setSource("game.qml")
+        }
         state: "welcome"
         states: [
             State {
@@ -88,14 +64,4 @@ ApplicationWindow {
         ]
 
     }
-
-    //replace Text: Introduction
-
-
 }
-
-/*##^##
-Designer {
-    D{i:1;anchors_height:400;anchors_width:400}
-}
-##^##*/

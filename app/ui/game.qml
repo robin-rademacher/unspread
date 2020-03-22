@@ -2,31 +2,7 @@ import QtQuick 2.14
 import QtQuick.Controls 2.14
 import QtQuick.Controls.Universal 2.14
 
-ApplicationWindow {
-    id: window
-    width: 1080
-    height: 720
-    color: "#000000"
-    visible: true
-    Universal.theme: Universal.Dark
-    Universal.accent: Universal.Violet
-
-    Grid {
-        id: grid
-        anchors.rightMargin: 0
-        anchors.bottomMargin: 6
-        anchors.leftMargin: 0
-        anchors.topMargin: -6
-        rows: 5
-        columns: 5
-        anchors.fill: parent
-
-
-    }
-
-
-
-
+Item {
 //DEBUG REC
     Rectangle{
 
@@ -363,11 +339,4 @@ ApplicationWindow {
 
         //end rectangle
     }
-
 }
-
-/*##^##
-Designer {
-    D{i:1;anchors_height:400;anchors_width:400}
-}
-##^##*/
