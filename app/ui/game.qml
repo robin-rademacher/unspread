@@ -2,6 +2,11 @@ import QtQuick 2.14
 import QtQuick.Controls 2.14
 import QtQuick.Controls.Universal 2.14
 
+Rectangle {
+    width: 1080
+    height: 720
+    color: "#000000"
+
 Item {
 //DEBUG REC
     Rectangle{
@@ -200,8 +205,8 @@ Item {
 
     Rectangle {
         id: factornav
-        x: 804
-        y: -3
+        x: 754
+        y: 0
         width: 328
         height: 732
         color: "#464646"
@@ -339,4 +344,5 @@ Item {
 
         //end rectangle
     }
+}
 }
