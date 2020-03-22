@@ -388,8 +388,8 @@ Rectangle {
         onClicked: popupclose.open()
         Image {
             id: logo
-            x: 3
-            y: 3
+            x: 0
+            y: 0
             source: "../assets/images/logo.png"
             width: 34
             height: 34

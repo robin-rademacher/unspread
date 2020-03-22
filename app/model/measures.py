@@ -11,6 +11,7 @@ class Measures:
     curfew = False
     parks = True
     assemblies = True
+    quarantine = False
 
     def control_borders(self):  # nach x Tagen
         self.borders = not self.borders
@@ -81,3 +82,6 @@ class Measures:
         Factors.tranquility += sign * 1
         Factors.distance += sign * -1
         Factors.cut()
+
+    def control_quarantine(self):
+        pass
