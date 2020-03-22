@@ -34,7 +34,6 @@ Rectangle {
         width: 40
         height: 40
         font.pointSize: 24
-        background: "0c0c0c"
         onClicked: {
             loader.setSource("menu.qml")
         }

@@ -16,7 +16,6 @@ Rectangle {
         y: 0
         width: 40
         height: 40
-        background: "111111"
         onClicked: {
            popupmeasures.close()
         }
