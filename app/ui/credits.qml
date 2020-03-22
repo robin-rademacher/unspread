@@ -20,14 +20,6 @@ Rectangle {
             source: "../assets/images/logo.png"
         }
         // Title
-        Text {
-            id: title
-            x: 274
-            y: 372
-            color: "#ffffff"
-            text: qsTr("unspread")
-            font.pixelSize: 70
-        }
 
 
 
@@ -36,11 +28,10 @@ Rectangle {
 
         Button {
             id: creditsbutton
-            x: 967
-            y: 14
-            width: 100
-            height: 58
-            text: qsTr("back")
+            x: 1040
+            y: 0
+            width: 40
+            height: 40
             font.pointSize: 24
             onClicked: {
                 loader.setSource("menu.qml")
@@ -67,10 +58,21 @@ Rectangle {
 
         Text {
             id: text2
-            x: 274
-            y: 485
+            x: 278
+            y: 515
             color: "#ffffff"
-            text: qsTr("Team:<br>Matthias Ngo<br>Robin Rademacher<br>Antonia Mann<br>Melchior Mann")
+            text: qsTr("Matthias Ngo - Designer <br>Robin Rademacher - Programmierer<br>Antonia Mann - Fachexpertin<br>Melchior Mann - Creative Director")
             font.pixelSize: 20
+        }
+
+        Image {
+            id: logotext
+            x: 201
+            y: 341
+            width: 728
+            height: 146
+            mipmap: true
+            source: "../assets/images/logotext.png"
+            fillMode: Image.PreserveAspectFit
         }
     }

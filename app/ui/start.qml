@@ -22,6 +22,20 @@ Rectangle {
         fillMode: Image.PreserveAspectFit
         source: "../assets/images/Christian_Dorsten.png"
     }
+    //Image Map
+    Image {
+        id: map
+        x: 91
+        y: 219
+        width: 284
+        height: 283
+        source: "../assets/images/Karte_Porollos.png"
+        mipmap: true
+        fillMode: Image.PreserveAspectFit
+        visible: false
+    }
+
+
     //initial welcome Text
     Text {
         id: welcometext
@@ -69,8 +83,11 @@ Rectangle {
                 PropertyChanges { target: welcometext; visible: false }
                 PropertyChanges { target: introductiontext; visible: true }
                 PropertyChanges { target: imagedorsten; visible: false }
+                PropertyChanges { target: map; visible: true }
             }
         ]
 
     }
+
+
 }
