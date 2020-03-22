@@ -2,7 +2,10 @@ import QtQuick 2.14
 import QtQuick.Controls 2.14
 import QtQuick.Controls.Universal 2.14
 
-Item {
+Rectangle {
+    width: 1080
+    height: 720
+    color: "#000000"
     //Image Christian Dorsten
     Image {
         id: image
