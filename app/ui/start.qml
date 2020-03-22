@@ -76,7 +76,7 @@ ApplicationWindow {
 
 
         states: State {
-                    name: "change"; when: continuebutton.pressed == true
+                    name: "change"; when: continuebutton.onClicked == true
                     PropertyChanges { target: welcometext; visible: false }
                     PropertyChanges { target: introductiontext; visible: true }
                 }

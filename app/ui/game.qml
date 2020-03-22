@@ -24,6 +24,27 @@ ApplicationWindow {
 
     }
 
+
+
+
+//DEBUG REC
+    Rectangle{
+
+        id: debugrec
+        x: 361
+        y: 604
+        width: 118
+        height: 99
+        color: "#d53232"
+        visible: false
+    }
+
+//DEBUG REC END
+
+
+
+
+
     // Map
 
     Image {
@@ -36,15 +57,75 @@ ApplicationWindow {
         source: "../assets/images/Karte_Porollos.png"
 
 
-        //Button Gov - Treatments
+        //Buttons
         RoundButton {
-            id: roundButton
+            id: govbutton
             x: 420
             y: 329
             width: 35
-            height: 33
+            height: 35
             text: ""
-            visible: false
+            visible: true
+        }
+
+        RoundButton {
+            id: statisticbutton
+            x: 420
+            y: 232
+            width: 35
+            height: 35
+            text: ""
+            visible: true
+        }
+
+        RoundButton {
+            id: harborbutton
+            x: 279
+            y: 306
+            width: 35
+            height: 35
+            text: ""
+            visible: true
+        }
+
+        RoundButton {
+            id: airport1button
+            x: 557
+            y: 188
+            width: 35
+            height: 35
+            text: ""
+            Image {
+                id: name
+                x: 0
+                y: 0
+                width: 35
+                height: 35
+                source: "../assets/images/Flugzeug-Button.png"
+            }
+            visible: true
+
+            states: State {
+                        name: "down"; when: airportbutton1.pressed == true
+                        PropertyChanges { target: debugrec; visible: true }
+                    }
+
+        }
+
+        RoundButton {
+            id: airport2button
+            x: 443
+            y: 416
+            width: 35
+            height: 35
+            visible: true
+            icon.name: "airport2"
+            icon.source: "../assets/images/Flugzeug-Button.png"
+
+            states: State {
+                        name: "up"; when: airportbutton1.pressed == true
+                        PropertyChanges { target: debugrec; visible: true }
+                    }
         }
     }
 
