@@ -18,7 +18,7 @@ Rectangle {
         height: 40
         //-------------------------------------------Close Popup Button FEHLT
         onClicked: {
-           parent.close()
+           popupmeasures.close()
         }
     }
 

@@ -21,27 +21,27 @@ class Bridge(QObject):
 
     @Slot(result=str)
     def getPeopleAlive(self):
-        return Stats.people_alive
+        return str(Stats.people_alive)
 
     @Slot(result=str)
     def getPeopleHealthy(self):
-        return Stats.people_healthy
+        return str(Stats.people_healthy)
 
     @Slot(result=str)
     def getPeopleInfected(self):
-        return Stats.people_infected
+        return str(Stats.people_infected)
 
     @Slot(result=str)
     def getPeopleDead(self):
-        return Stats.people_dead
+        return str(Stats.people_dead)
 
     @Slot(result=str)
     def getPeopleImmune(self):
-        return Stats.people_immune
+        return str(Stats.people_immune)
 
     @Slot(result=str)
     def getStockIndex(self):
-        return Stats.stock_index
+        return str(Stats.stock_index)
 
     @Slot()
     def update(self):

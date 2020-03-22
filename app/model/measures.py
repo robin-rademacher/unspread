@@ -54,9 +54,15 @@ class Measures:
         {"name": "disinfect", "active": False,
          "changes": [0, -1, 0, 0, 0, 0, 1, 0, 0]},
         {"name": "delay_surgeries", "active": False,
-            "changes": [0, 0, 0, 0, 3, 0, 0, 0, 0]},
+         "changes": [0, 0, 0, 0, 3, 0, 0, 0, 0]},
         {"name": "provide_reagents", "active": False,
          "changes": [3, 0, 0, 0, 0, 0, 1, 0, 0]},
+        {"name": "close_port", "active": False,
+         "changes": [0, 0, 0, 0, 0, 0, 0, 0, 0]},
+        {"name": "close_airport1", "active": False,
+         "changes": [0, 0, 0, 0, 0, 0, 0, 0, 0]},
+        {"name": "close_airport2", "active": False,
+         "changes": [0, 0, 0, 0, 0, 0, 0, 0, 0]},
     ]
 
     @staticmethod
