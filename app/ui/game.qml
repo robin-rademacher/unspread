@@ -248,7 +248,7 @@ Rectangle {
             onClicked: {
             //------------------------------------------------------Time Pause Function
                 if (state == "pause") state = "play"
-                else if (state == "pause") state = "play"
+                else if (state == "play") state = "pause"
             }
             state: "play"
             states: [
