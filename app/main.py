@@ -11,6 +11,6 @@ if __name__ == "__main__":
     engine = QQmlApplicationEngine()
     bridge = Bridge()
     engine.rootContext().setContextProperty("app", bridge)
-    engine.load("ui/game.qml")
+    engine.load("ui/start.qml")
     engine.quit.connect(app.quit)
     sys.exit(app.exec_())
