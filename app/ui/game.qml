@@ -106,7 +106,7 @@ ApplicationWindow {
             visible: true
 
             states: State {
-                        name: "down"; when: airportbutton1.pressed == true
+                        name: "down"; when: airport1button.pressed == true
                         PropertyChanges { target: debugrec; visible: true }
                     }
 
@@ -123,7 +123,7 @@ ApplicationWindow {
             icon.source: "../assets/images/Flugzeug-Button.png"
 
             states: State {
-                        name: "up"; when: airportbutton1.pressed == true
+                        name: "up"; when: airport2button.pressed == true
                         PropertyChanges { target: debugrec; visible: true }
                     }
         }

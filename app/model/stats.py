@@ -16,7 +16,6 @@ class Stats:
     immune = [0]
     stock_index = 10000
     people_unemployed = 1000000
-    bip = 50000
 
     def refresh(self):
         threshold_infected = INFECTION_RATE + INFECTION_RATE/20 * (- Factors.protective_clothing - Factors.capacity_hospitals
