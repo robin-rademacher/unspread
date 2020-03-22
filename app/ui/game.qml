@@ -5,7 +5,7 @@ import QtQuick.Controls.Universal 2.14
 Rectangle {
     width: 1080
     height: 720
-    color: "#000000"
+    color: "#4c4c4c"
 
     Universal.theme: Universal.Dark
     Universal.accent: Universal.Violet
