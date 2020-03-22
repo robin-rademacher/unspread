@@ -136,7 +136,7 @@ Rectangle {
                         PropertyChanges { target: cancelthing; visible: false }
                     },
                     State {
-                        name: "close";
+                        name: "closed";
                         PropertyChanges { target: cancelthing; visible: true }
                     }
                 ]
@@ -187,7 +187,7 @@ Rectangle {
                         PropertyChanges { target: cancelthing1; visible: false }
                     },
                     State {
-                        name: "close";
+                        name: "closed";
                         PropertyChanges { target: cancelthing1; visible: true }
                     }
                 ]
@@ -236,7 +236,7 @@ Rectangle {
                         PropertyChanges { target: cancelthing2; visible: false }
                     },
                     State {
-                        name: "close";
+                        name: "closed";
                         PropertyChanges { target: cancelthing2; visible: true }
                     }
                 ]

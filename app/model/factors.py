@@ -17,6 +17,11 @@ class Factors:
             if name == factor["name"]:
                 return factor["value"]
 
+    def get_previous(self, name):
+        for factor in self.factors:
+            if name == factor["name"]:
+                return factor["previous"]
+
     def cut(self):
         for factor in self.factors:
             if factor["value"] < -5:
