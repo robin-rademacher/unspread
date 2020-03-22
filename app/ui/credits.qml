@@ -7,8 +7,7 @@ Rectangle {
     color: "#000000"
 
     Universal.theme: Universal.Dark
-    Universal.accent: Universal.Violet
-
+    Universal.accent: Universal.Violet  
         //Logo
         Image {
             id: logo

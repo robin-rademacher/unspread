@@ -60,8 +60,8 @@ Rectangle {
 //Dialog Measures
         Popup{
             id: popupmeasures
-            x: 50
-            y: 30
+            x: 20
+            y: 20
             topInset: 0
             leftInset: 0
             padding: 0
@@ -147,6 +147,10 @@ Rectangle {
                 height: 35
                 onClicked: {
                 //------------------------------------------------------Close Harbor Function
+
+                    //----------------------------------------------------------------------------------------------
+                    //----------------------------------------------------------------------------------------------weiter
+
                 }
                 Image {
                     id: harborbuttonimage
@@ -243,9 +247,35 @@ Rectangle {
             Universal.accent: Universal.Mauve
             onClicked: {
             //------------------------------------------------------Time Pause Function
+                if (state == "pause") state = "play"
+                else if (state == "pause") state = "play"
+            }
+            state: "play"
+            states: [
+                State {
+                    name: "play"
+                    PropertyChanges { target: playimg; visible: true }
+                    PropertyChanges { target: pauseimg; visible: false }
+                },
+                State {
+                    name: "pause";
+                    PropertyChanges { target: playimg; visible: false }
+                    PropertyChanges { target: pauseimg; visible: true }
+                }
+            ]
+
+            Image {
+                id: playimg
+                source: "../assets/images/Play_Button.png"
+                mipmap: true
+                x:0
+                y:0
+                width: 45
+                height: 45
             }
             Image {
-                id: pause
+                visible: false
+                id: pauseimg
                 source: "../assets/images/Pause-Button.png"
                 mipmap: true
                 x:0
@@ -255,30 +285,10 @@ Rectangle {
             }
         }
 
-        Button {
-            id: playbutton
-            x: 85
-            y: 658
-            width: 45
-            height: 45
-            highlighted: true
-            Universal.accent: Universal.Mauve
-            onClicked: {
-            //------------------------------------------------------Time Play Function
-            }
-            Image {
-                id: play
-                source: "../assets/images/Play_Button.png"
-                mipmap: true
-                x:0
-                y:0
-                width: 45
-                height: 45
-            }
-        }
+
         Button {
             id: fastforwardbutton
-            x: 145
+            x: 90
             y: 658
             width: 45
             height: 45
