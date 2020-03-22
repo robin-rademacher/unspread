@@ -11,3 +11,8 @@ pip install PySide2
 cd app
 python main.py
 ```
+OR
+```
+cd app/dist/main
+./main.exe
+```
