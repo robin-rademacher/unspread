@@ -149,6 +149,7 @@ Rectangle {
                 height: 35
                 onClicked: {
                     //------------------------------------------------------Close Harbor Function
+                    app.execute("close_port")
                     if (state == "closed") state = "open"
                     else if (state == "open") state = "closed"
 
@@ -200,9 +201,9 @@ Rectangle {
                 height: 35
                 onClicked: {
                     //------------------------------------------------------Close Airport1 Function
+                    app.execute("close_airport1")
                     if (state == "closed") state = "open"
                     else if (state == "open") state = "closed"
-
                 }
 
                 state: "open"
@@ -249,6 +250,7 @@ Rectangle {
                 height: 35
                 onClicked: {
                     //------------------------------------------------------Close Airport2 Function
+                    app.execute("close_airport2")
                     if (state == "closed") state = "open"
                     else if (state == "open") state = "closed"
 

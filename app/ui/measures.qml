@@ -73,6 +73,7 @@ Rectangle {
 
         onClicked: {
             //------------------------------------------------aktiviert Maßnahme Grenzkontrolle
+            app.execute("control_borders")
             if (state == "off") state = "on"
             else if (state == "on") state = "off"
         }
@@ -109,7 +110,8 @@ Rectangle {
         Universal.accent: Universal.Crimson //Emerald
 
         onClicked: {
-            //------------------------------------------------aktiviert Maßnahme Grenzkontrolle
+            //------------------------------------------------aktiviert Maßnahme
+            app.execute("close_schools")
             if (state == "off") state = "on"
             else if (state == "on") state = "off"
         }
@@ -147,7 +149,8 @@ Rectangle {
         Universal.accent: Universal.Crimson //Emerald
 
         onClicked: {
-            //------------------------------------------------aktiviert Maßnahme Grenzkontrolle
+            //------------------------------------------------aktiviert Maßnahme
+            app.execute("quarantine")
             if (state == "off") state = "on"
             else if (state == "on") state = "off"
         }

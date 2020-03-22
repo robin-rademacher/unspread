@@ -12,8 +12,15 @@ class Bridge(QObject):
         return (value + 5.0) / 10.0
 
     @Slot(str, result=int)
-    def getFactorPrevious(self, name):
-        return Factors.get_previous(name)
+    def getFactorTrend(self, name):
+        value = Factors.get(name)
+        previous = Factors.get_previous(name)
+        if value > previous:
+            return 1
+        if value == previous:
+            return 0
+        if value < previous:
+            return -1
 
     @Slot(str)
     def execute(self, measure):
