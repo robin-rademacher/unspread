@@ -4,7 +4,7 @@ import QtQuick.Controls.Universal 2.14
 Rectangle {
     width: 1080
     height: 720
-    color: "#000000"
+    color: "#131313"
 
     Universal.theme: Universal.Dark
     Universal.accent: Universal.Violet
@@ -13,23 +13,27 @@ Rectangle {
         //Logo
         Image {
             id: logo
-            x: 505
-            y: 110
+            x: 501
+            y: 132
             width: 500
             height: 500
             mipmap: true
             fillMode: Image.PreserveAspectFit
             source: "../assets/images/logo.png"
         }
-        // Title
-        Text {
-            id: title
-            x: 100
-            y: 142
-            color: "#ffffff"
-            text: qsTr("unspread")
-            font.pixelSize: 70
+
+        Image {
+            id: logotext
+            x: 67
+            y: 110
+            width: 586
+            height: 127
+            fillMode: Image.PreserveAspectFit
+            source: "../assets/images/logotext.png"
+            mipmap: true
         }
+
+        // Title
 
 
 
@@ -61,4 +65,6 @@ Rectangle {
                 loader.setSource("credits.qml")
             }
         }
+
+
     }
