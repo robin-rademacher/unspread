@@ -313,7 +313,7 @@ Rectangle {
             width: 45
             height: 45
             highlighted: true
-            Universal.accent: Universal.Mauve
+            Universal.accent: Universal.Dark
             onClicked: {
                 //------------------------------------------------------Time Pause Function
                 if (state == "pause") {
@@ -368,7 +368,7 @@ Rectangle {
             width: 45
             height: 45
             highlighted: true
-            Universal.accent: Universal.Mauve
+            Universal.accent: Universal.Dark
             onClicked: {
                 //------------------------------------------------------Time FastForward Function
                 if (state == "normal") {

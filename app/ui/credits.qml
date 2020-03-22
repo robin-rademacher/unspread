@@ -37,6 +37,15 @@ Rectangle {
         onClicked: {
             loader.setSource("menu.qml")
         }
+        Image {
+            id: closeicon
+            source: "../assets/images/Back.png"
+            mipmap: true
+            x:0
+            y:0
+            width: 40
+            height: 40
+        }
     }
 
     Text {

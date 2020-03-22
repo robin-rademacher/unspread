@@ -16,10 +16,20 @@ Rectangle {
         y: 0
         width: 40
         height: 40
-        //-------------------------------------------Close Popup Button FEHLT
+        Universal.accent: Universal.Steel
         onClicked: {
            popupmeasures.close()
         }
+        Image {
+            id: closeimage
+            source: "../assets/images/Close.png"
+            mipmap: true
+            x:0
+            y:0
+            width: 40
+            height: 40
+        }
+
     }
 
 
