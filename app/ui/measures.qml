@@ -12,7 +12,7 @@ Rectangle {
 
     Button{
         id: closepopup
-        x: 694
+        x: 674
         y: 0
         width: 40
         height: 40

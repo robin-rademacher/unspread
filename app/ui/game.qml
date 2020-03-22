@@ -365,6 +365,7 @@ Rectangle {
             width: 45
             height: 45
             highlighted: true
+            Universal.accent: Universal.Steel
             onClicked: {
                 //------------------------------------------------------Time FastForward Function
                 if (state == "normal") {
@@ -379,7 +380,7 @@ Rectangle {
             states: [
                 State {
                     name: "normal"
-                    //PropertyChanges { target: fastforwardbutton; Universal.accent: Universal.Steel }
+                    PropertyChanges { target: fastforwardbutton; Universal.accent: Universal.Steel }
                 },
                 State {
                     name: "fast";
