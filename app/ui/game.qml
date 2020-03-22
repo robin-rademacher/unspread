@@ -65,7 +65,21 @@ ApplicationWindow {
             width: 35
             height: 35
             text: ""
+            Image {
+                id: govbuttonimage
+                x: 0
+                y: 0
+                width: 35
+                height: 35
+                source: "../assets/images/Regierung-Button.png"
+            }
             visible: true
+
+            states: State {
+                        name: "down"; when: govbutton.pressed == true
+                        PropertyChanges { target: debugrec; visible: true }
+                    }
+
         }
 
         RoundButton {
@@ -75,7 +89,22 @@ ApplicationWindow {
             width: 35
             height: 35
             text: ""
+            Image {
+                id: statisticbuttonimage
+                x: 0
+                y: 0
+                width: 35
+                height: 35
+                source: "../assets/images/Börse-Button.png"
+                mipmap: true
+            }
             visible: true
+
+            states: State {
+                        name: "down"; when: statisticbutton.pressed == true
+                        PropertyChanges { target: debugrec; visible: true }
+                    }
+
         }
 
         RoundButton {
@@ -85,7 +114,21 @@ ApplicationWindow {
             width: 35
             height: 35
             text: ""
+            Image {
+                id: harborbuttonimage
+                x: 0
+                y: 0
+                width: 35
+                height: 35
+                source: "../assets/images/Anker-Button.png"
+                mipmap: true
+            }
             visible: true
+
+            states: State {
+                        name: "down"; when: harborbutton.pressed == true
+                        PropertyChanges { target: debugrec; visible: true }
+                    }
         }
 
         RoundButton {
@@ -96,12 +139,13 @@ ApplicationWindow {
             height: 35
             text: ""
             Image {
-                id: name
+                id: airport1buttonimage
                 x: 0
                 y: 0
                 width: 35
                 height: 35
                 source: "../assets/images/Flugzeug-Button.png"
+                mipmap: true
             }
             visible: true
 
@@ -118,12 +162,19 @@ ApplicationWindow {
             y: 416
             width: 35
             height: 35
+            Image {
+                id: airport2buttonimage
+                x: 0
+                y: 0
+                width: 35
+                height: 35
+                source: "../assets/images/Flugzeug-Button.png"
+                mipmap: true
+            }
             visible: true
-            icon.name: "airport2"
-            icon.source: "../assets/images/Flugzeug-Button.png"
 
             states: State {
-                        name: "up"; when: airport2button.pressed == true
+                        name: "down"; when: airport2button.pressed == true
                         PropertyChanges { target: debugrec; visible: true }
                     }
         }
