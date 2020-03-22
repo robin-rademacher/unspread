@@ -274,7 +274,7 @@ Rectangle {
             }
         }
 
-// right Navigation with factors
+// right Navigation with Factors
 
         Rectangle {
             id: factornav
