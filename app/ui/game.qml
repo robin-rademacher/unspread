@@ -313,7 +313,7 @@ Rectangle {
             width: 45
             height: 45
             highlighted: true
-            Universal.accent: Universal.Dark
+            Universal.accent: Universal.Steel
             onClicked: {
                 //------------------------------------------------------Time Pause Function
                 if (state == "pause") {
@@ -367,8 +367,6 @@ Rectangle {
             y: 658
             width: 45
             height: 45
-            highlighted: true
-            Universal.accent: Universal.Dark
             onClicked: {
                 //------------------------------------------------------Time FastForward Function
                 if (state == "normal") {
@@ -383,7 +381,7 @@ Rectangle {
             states: [
                 State {
                     name: "normal"
-                    PropertyChanges { target: fastforwardbutton; Universal.accent: Universal.Mauve }
+                    PropertyChanges { target: fastforwardbutton; Universal.accent: Universal.Steel }
                 },
                 State {
                     name: "fast";
