@@ -194,7 +194,7 @@ Rectangle {
         }
 
 
-        // Time and Time Control
+// Time and Time Control
 
         Text {
             id: clock
@@ -212,27 +212,64 @@ Rectangle {
             x: 25
             y: 658
             width: 45
-            height: 40
-            //source:
+            height: 45
+            Universal.accent: Universal.Violet
+            onClicked: {
+            //------------------------------------------------------Time Pause Function
+            }
+            Image {
+                id: pause
+                source: "../assets/images/Pause-Button.png"
+                mipmap: true
+                x:0
+                y:0
+                width: 45
+                height: 45
+            }
         }
+
         Button {
             id: playbutton
-            x: 84
+            x: 85
             y: 658
-            width: 42
-            height: 40
-            //source:
+            width: 45
+            height: 45
+            Universal.accent: Universal.Violet
+            onClicked: {
+            //------------------------------------------------------Time Play Function
+            }
+            Image {
+                id: play
+                source: "../assets/images/Play_Button.png"
+                mipmap: true
+                x:0
+                y:0
+                width: 45
+                height: 45
+            }
         }
         Button {
             id: fastforwardbutton
-            x: 140
+            x: 145
             y: 658
-            width: 42
-            height: 40
-            //source:
+            width: 45
+            height: 45
+            Universal.accent: Universal.Violet
+            onClicked: {
+            //------------------------------------------------------Time FastForward Function
+            }
+            Image {
+                id: ff
+                source: "../assets/images/FastForward-Button.png"
+                mipmap: true
+                x:0
+                y:0
+                width: 45
+                height: 45
+            }
         }
 
-        // right Navigation with factors
+// right Navigation with factors
 
         Rectangle {
             id: factornav
@@ -243,7 +280,7 @@ Rectangle {
             color: "#464646"
 
 
-            // Factor 1:
+// Factor 1:
             Text {
                 id: textfactor1
                 x: 22
@@ -251,13 +288,13 @@ Rectangle {
                 width: 57
                 height: 23
                 color: "#ffffff"
-                text: qsTr("Faktor 1")
+                text: qsTr("Reagentien")
                 font.pixelSize: 12
             }
 
             Slider {
                 id: sliderfactor1
-                x: 102
+                x: 120
                 y: 29
                 width: 146
                 height: 32
@@ -269,13 +306,14 @@ Rectangle {
                 id: imagefactor1
                 x: 270
                 y: 26
-                width: 36
+                width: 38
                 height: 38
                 fillMode: Image.PreserveAspectFit
-                source: "qrc:/qtquickplugin/images/template_image.png"
+                mipmap: true
+                source: "../assets/images/neutron_neutron.png"
             }
 
-            // Factor 2
+// Factor 2
             Text {
                 id: textfactor2
                 x: 22
@@ -283,13 +321,13 @@ Rectangle {
                 width: 57
                 height: 23
                 color: "#ffffff"
-                text: qsTr("Faktor 2")
+                text: qsTr("Schutzkleidung")
                 font.pixelSize: 12
             }
 
             Slider {
                 id: sliderfactor2
-                x: 102
+                x: 120
                 y: 73
                 width: 146
                 height: 32
@@ -301,27 +339,28 @@ Rectangle {
                 id: imagefactor2
                 x: 270
                 y: 70
-                width: 36
+                width: 38
                 height: 38
-                source: "qrc:/qtquickplugin/images/template_image.png"
                 fillMode: Image.PreserveAspectFit
+                mipmap: true
+                source: "../assets/images/neutron_neutron.png"
             }
-            // Factor 3
+// Factor 3
             Text {
                 id: textfactor3
                 x: 22
-                y: 128
+                y: 126
                 width: 57
                 height: 23
                 color: "#ffffff"
-                text: qsTr("Faktor 3")
+                text: qsTr("med. Personal")
                 font.pixelSize: 12
             }
 
             Slider {
                 id: sliderfactor3
-                x: 102
-                y: 119
+                x: 120
+                y: 117
                 width: 146
                 height: 32
                 value: 0.5
@@ -331,29 +370,30 @@ Rectangle {
             Image {
                 id: imagefactor3
                 x: 270
-                y: 116
-                width: 36
+                y: 114
+                width: 38
                 height: 38
-                source: "qrc:/qtquickplugin/images/template_image.png"
                 fillMode: Image.PreserveAspectFit
+                mipmap: true
+                source: "../assets/images/neutron_neutron.png"
             }
 
-            // Factor 4
+// Factor 4
             Text {
                 id: textfactor4
                 x: 22
-                y: 172
+                y: 170
                 width: 57
                 height: 23
                 color: "#ffffff"
-                text: qsTr("Faktor 4")
+                text: qsTr("Moral")
                 font.pixelSize: 12
             }
 
             Slider {
                 id: sliderfactor4
-                x: 102
-                y: 163
+                x: 120
+                y: 161
                 width: 146
                 height: 32
                 value: 0.5
@@ -363,13 +403,179 @@ Rectangle {
             Image {
                 id: imagefactor4
                 x: 270
-                y: 160
-                width: 36
+                y: 158
+                width: 38
                 height: 38
-                source: "qrc:/qtquickplugin/images/template_image.png"
                 fillMode: Image.PreserveAspectFit
+                mipmap: true
+                source: "../assets/images/neutron_neutron.png"
             }
 
+//Faktor 5
+            Text {
+                id: textfactor5
+                x: 21
+                y: 214
+                width: 57
+                height: 23
+                color: "#ffffff"
+                text: qsTr("Spital Kapazität")
+                font.pixelSize: 12
+            }
+
+            Slider {
+                id: sliderfactor5
+                x: 120
+                y: 205
+                width: 146
+                height: 32
+                value: 0.5
+                enabled: false
+            }
+
+            Image {
+                id: imagefactor5
+                x: 270
+                y: 202
+                width: 38
+                height: 38
+                fillMode: Image.PreserveAspectFit
+                mipmap: true
+                source: "../assets/images/neutron_neutron.png"
+            }
+
+//Faktor 6
+            Text {
+                id: textfactor6
+                x: 22
+                y: 258
+                width: 57
+                height: 23
+                color: "#ffffff"
+                text: qsTr("Sicherheit")
+                font.pixelSize: 12
+            }
+
+            Slider {
+                id: sliderfactor6
+                x: 120
+                y: 249
+                width: 146
+                height: 32
+                value: 0.5
+                enabled: false
+            }
+
+            Image {
+                id: imagefactor6
+                x: 270
+                y: 246
+                width: 38
+                height: 38
+                fillMode: Image.PreserveAspectFit
+                mipmap: true
+                source: "../assets/images/neutron_neutron.png"
+            }
+
+
+//Faktor 7
+            Text {
+                id: textfactor7
+                x: 22
+                y: 302
+                width: 57
+                height: 23
+                color: "#ffffff"
+                text: qsTr("Beliebtheit")
+                font.pixelSize: 12
+            }
+
+            Slider {
+                id: sliderfactor7
+                x: 120
+                y: 293
+                width: 146
+                height: 32
+                value: 0.5
+                enabled: false
+            }
+
+            Image {
+                id: imagefactor7
+                x: 270
+                y: 290
+                width: 38
+                height: 38
+                fillMode: Image.PreserveAspectFit
+                mipmap: true
+                source: "../assets/images/neutron_neutron.png"
+            }
+
+//Faktor 8
+            Text {
+                id: textfactor8
+                x: 22
+                y: 346
+                width: 57
+                height: 23
+                color: "#ffffff"
+                text: qsTr("öffentliche Ruhe")
+                font.pixelSize: 12
+            }
+
+            Slider {
+                id: sliderfactor8
+                x: 120
+                y: 337
+                width: 146
+                height: 32
+                value: 0.5
+                enabled: false
+            }
+
+            Image {
+                id: imagefactor8
+                x: 270
+                y: 334
+                width: 38
+                height: 38
+                fillMode: Image.PreserveAspectFit
+                mipmap: true
+                source: "../assets/images/neutron_neutron.png"
+            }
+
+//Faktor 9
+            Text {
+                id: textfactor9
+                x: 22
+                y: 390
+                width: 57
+                height: 23
+                color: "#ffffff"
+                text: qsTr("soziale Distanz")
+                font.pixelSize: 12
+            }
+
+            Slider {
+                id: sliderfactor9
+                x: 120
+                y: 381
+                width: 146
+                height: 32
+                value: 0.5
+                enabled: false
+            }
+
+            Image {
+                id: imagefactor9
+                x: 270
+                y: 378
+                width: 38
+                height: 38
+                fillMode: Image.PreserveAspectFit
+                mipmap: true
+                source: "../assets/images/neutron_neutron.png"
+            }
 
 
 
@@ -382,7 +588,6 @@ Rectangle {
         y: 672
         width: 34
         height: 34
-        text: ""
         opacity: 1
         visible: true
         onClicked: popupclose.open()
