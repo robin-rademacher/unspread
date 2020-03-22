@@ -19,7 +19,6 @@ Rectangle {
             running: false
             onTriggered: {
                 day.text = parseInt(day.text) + 1
-                app.execute("total_curfew")
                 app.update()
                 sliderfactor1.value = app.getFactor("reagents")
                 sliderfactor2.value = app.getFactor("protective_clothing")
@@ -30,6 +29,12 @@ Rectangle {
                 sliderfactor7.value = app.getFactor("popularity")
                 sliderfactor8.value = app.getFactor("tranquility")
                 sliderfactor9.value = app.getFactor("distance")
+                alivenumber.text = app.getPeopleAlive()
+                healthynumber.text = app.getPeopleHealthy()
+                infectednumber.text = app.getPeopleInfected()
+                deadnumber.text = app.getPeopleDead()
+                immunenumber.text = app.getPeopleImmune()
+                stockindex.text = app.getStockIndex()
             }
         }
 
@@ -786,7 +791,7 @@ Rectangle {
         x: 246
         y: 645
         color: "#ffffff"
-        text: qsTr("45000000")
+        text: app.getPeopleAlive()
     }
 
 
@@ -805,7 +810,7 @@ Rectangle {
         x: 374
         y: 619
         color: "#ffffff"
-        text: qsTr("45000000")
+        text: app.getPeopleHealthy()
     }
 
     Image {
@@ -819,11 +824,11 @@ Rectangle {
     }
 
     Label {
-        id: healthynumber1
+        id: infectednumber
         x: 505
         y: 619
         color: "#ffffff"
-        text: qsTr("0")
+        text: app.getPeopleInfected()
     }
 
     Image {
@@ -841,11 +846,11 @@ Rectangle {
         x: 505
         y: 665
         color: "#ffffff"
-        text: qsTr("0")
+        text: app.getPeopleDead()
     }
 
     Image {
-        id: imune
+        id: immune
         x: 328
         y: 652
         width: 40
@@ -855,11 +860,11 @@ Rectangle {
     }
 
     Label {
-        id: imunenumber
+        id: immunenumber
         x: 381
         y: 665
         color: "#ffffff"
-        text: qsTr("0")
+        text: app.getPeopleImmune()
     }
 
     Image {
@@ -873,10 +878,10 @@ Rectangle {
     }
 
     Label {
-        id: stocknumber
+        id: stockindex
         x: 600
         y: 645
         color: "#ffffff"
-        text: qsTr("10000")
+        text: app.getStockIndex()
     }
 }
