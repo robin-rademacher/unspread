@@ -11,21 +11,6 @@ Rectangle {
     Universal.accent: Universal.Violet
 
     Item {
-        //DEBUG REC
-        Rectangle{
-
-            id: debugrec
-            x: 361
-            y: 604
-            width: 118
-            height: 99
-            color: "#d53232"
-            visible: false
-        }
-
-        //DEBUG REC END
-
-
         //popoup close
 
         Popup {
@@ -104,10 +89,6 @@ Rectangle {
                 }
                 visible: true
 
-                states: State {
-                    name: "down"; when: govbutton.pressed == true
-                    PropertyChanges { target: debugrec; visible: true }
-                }
 
             }
 
@@ -132,10 +113,6 @@ Rectangle {
                 }
                 visible: true
 
-                states: State {
-                    name: "down"; when: statisticbutton.pressed == true
-                    PropertyChanges { target: debugrec; visible: true }
-                }
 
             }
 
@@ -147,11 +124,37 @@ Rectangle {
                 height: 35
                 onClicked: {
                 //------------------------------------------------------Close Harbor Function
-
-                    //----------------------------------------------------------------------------------------------
-                    //----------------------------------------------------------------------------------------------weiter
+                    if (state == "closed") state = "open"
+                    else if (state == "open") state = "closed"
 
                 }
+
+                state: "open"
+                states: [
+                    State {
+                        name: "open"
+                        PropertyChanges { target: cancelthing; visible: false }
+                    },
+                    State {
+                        name: "close";
+                        PropertyChanges { target: cancelthing; visible: true }
+                    }
+                ]
+
+                Image {
+                    id: cancelthing
+                    source: "../assets/images/Cancel_Thing.png"
+                    x:0
+                    y:0
+                    width:35
+                    height: 35
+                    mipmap: true
+                    z:1
+                    visible: false
+                }
+
+
+
                 Image {
                     id: harborbuttonimage
                     x: 0
@@ -162,11 +165,6 @@ Rectangle {
                     mipmap: true
                 }
                 visible: true
-
-                states: State {
-                    name: "down"; when: harborbutton.pressed == true
-                    PropertyChanges { target: debugrec; visible: true }
-                }
             }
 
             RoundButton {
@@ -176,7 +174,34 @@ Rectangle {
                 width: 35
                 height: 35
                 onClicked: {
-                //------------------------------------------------------Close Aiport Function
+                //------------------------------------------------------Close Airport1 Function
+                    if (state == "closed") state = "open"
+                    else if (state == "open") state = "closed"
+
+                }
+
+                state: "open"
+                states: [
+                    State {
+                        name: "open"
+                        PropertyChanges { target: cancelthing1; visible: false }
+                    },
+                    State {
+                        name: "close";
+                        PropertyChanges { target: cancelthing1; visible: true }
+                    }
+                ]
+
+                Image {
+                    id: cancelthing1
+                    source: "../assets/images/Cancel_Thing.png"
+                    x:0
+                    y:0
+                    width:35
+                    height: 35
+                    mipmap: true
+                    z:1
+                    visible: false
                 }
                 Image {
                     id: airport1buttonimage
@@ -189,11 +214,6 @@ Rectangle {
                 }
                 visible: true
 
-                states: State {
-                    name: "down"; when: airport1button.pressed == true
-                    PropertyChanges { target: debugrec; visible: true }
-                }
-
             }
 
             RoundButton {
@@ -203,7 +223,34 @@ Rectangle {
                 width: 35
                 height: 35
                 onClicked: {
-                //------------------------------------------------------Close Aiport Function
+                //------------------------------------------------------Close Airport2 Function
+                    if (state == "closed") state = "open"
+                    else if (state == "open") state = "closed"
+
+                }
+
+                state: "open"
+                states: [
+                    State {
+                        name: "open"
+                        PropertyChanges { target: cancelthing2; visible: false }
+                    },
+                    State {
+                        name: "close";
+                        PropertyChanges { target: cancelthing2; visible: true }
+                    }
+                ]
+
+                Image {
+                    id: cancelthing2
+                    source: "../assets/images/Cancel_Thing.png"
+                    x:0
+                    y:0
+                    width:35
+                    height: 35
+                    mipmap: true
+                    z:1
+                    visible: false
                 }
                 Image {
                     id: airport2buttonimage
@@ -216,10 +263,6 @@ Rectangle {
                 }
                 visible: true
 
-                states: State {
-                    name: "down"; when: airport2button.pressed == true
-                    PropertyChanges { target: debugrec; visible: true }
-                }
             }
         }
 
