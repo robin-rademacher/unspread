@@ -6,7 +6,7 @@ Rectangle {
     id: rectangle
     width: 1080
     height: 720
-    color: "#000000"
+    color: "#4c4c4c"
 
     Universal.theme: Universal.Dark
     Universal.accent: Universal.Violet
