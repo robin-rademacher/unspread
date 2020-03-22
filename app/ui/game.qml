@@ -880,7 +880,7 @@ Rectangle {
 
     Image {
         id: stock
-        x: 554
+        x: 583
         y: 632
         width: 40
         height: 40
@@ -890,7 +890,7 @@ Rectangle {
 
     Label {
         id: stockindex
-        x: 600
+        x: 629
         y: 645
         color: "#ffffff"
         text: app.getStockIndex()
