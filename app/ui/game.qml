@@ -40,8 +40,11 @@ Rectangle {
 
             Button{
                 id: popupbackbutton
-                width: 70
-                height: 50
+                x: 0
+                y: 0
+                padding: 0
+                width: 80
+                height: 60
                 text: qsTr("Beenden?")
                 font.pointSize: 8
                 onClicked: {
