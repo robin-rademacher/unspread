@@ -72,14 +72,20 @@ ApplicationWindow {
         x: 451
         y: 400
         text: qsTr("Weiter")
-
-
-
-        states: State {
-                    name: "change"; when: continuebutton.onClicked == true
-                    PropertyChanges { target: welcometext; visible: false }
-                    PropertyChanges { target: introductiontext; visible: true }
-                }
+        onClicked: { state = (state == "welcome") ? "introduction" : "welcome" }
+        state: "welcome"
+        states: [
+            State {
+                name: "welcome"
+                PropertyChanges { target: welcometext; visible: true }
+                PropertyChanges { target: introductiontext; visible: false }
+            },
+            State {
+                name: "introduction";
+                PropertyChanges { target: welcometext; visible: false }
+                PropertyChanges { target: introductiontext; visible: true }
+            }
+        ]
 
     }
 
