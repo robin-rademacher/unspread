@@ -6,7 +6,8 @@ Rectangle {
     height: 720
     color: "#000000"
 
-
+    Universal.theme: Universal.Dark
+    Universal.accent: Universal.Violet
 
         //Logo
         Image {

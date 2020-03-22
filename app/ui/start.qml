@@ -6,6 +6,11 @@ Rectangle {
     width: 1080
     height: 720
     color: "#000000"
+
+    Universal.theme: Universal.Dark
+    Universal.accent: Universal.Violet
+
+
     //Image Christian Dorsten
     Image {
         id: image
