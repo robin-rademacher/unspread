@@ -30,22 +30,23 @@ Rectangle {
 
         Popup {
             id: popupclose
-            x: 100
-            y: 100
-            width: 200
-            height: 300
+            x: 500
+            y: 330
+            width: 80
+            height: 60
             modal: true
             focus: true
             closePolicy: Popup.CloseOnEscape | Popup.CloseOnPressOutsideParent
 
             Button{
-            Text {
-                id: beenden
+                id: popupbackbutton
+                width: 70
+                height: 50
                 text: qsTr("Beenden?")
-            }
-            onClicked: {
-                loader.setSource("menu.qml")
-            }
+                font.pointSize: 8
+                onClicked: {
+                    loader.setSource("menu.qml")
+                }
             }
         }
 
@@ -232,8 +233,8 @@ Rectangle {
             id: factornav
             x: 754
             y: 0
-            width: 328
-            height: 732
+            width: 327
+            height: 721
             color: "#464646"
 
 
@@ -373,18 +374,18 @@ Rectangle {
 
     RoundButton {
         x: 1032
-        y: 680
+        y: 672
         text: ""
         opacity: 1
         visible: true
         onClicked: popupclose.open()
         Image {
             id: logo
-            x: 2
-            y: 2
+            x: 3
+            y: 3
             source: "../assets/images/logo.png"
-            width: 36
-            height: 36
+            width: 34
+            height: 34
             mipmap: true
         }
     }
