@@ -13,7 +13,7 @@ Rectangle {
 
     //Image Christian Dorsten
     Image {
-        id: image
+        id: imagedorsten
         x: 108
         y: 199
         width: 250
@@ -28,7 +28,7 @@ Rectangle {
         x: 451
         y: 285
         color: "#ffffff"
-        text: qsTr("Christian Dorsten, beratender Virologe <br>'In China wurde ein neues Virus entdeckt, welches sich dort <br>in großer Geschwindigkeit ausbreitet. Virologen warnen vor <br>einer weltweiten Pandemie und raten den Ländern sich darauf <br>vorzubereiten.'")
+        text: qsTr("Christian Dorsten, beratender Virologe <br><br>'In China wurde ein neues Virus entdeckt, welches sich dort <br>in großer Geschwindigkeit ausbreitet. Virologen warnen vor <br>einer weltweiten Pandemie und raten den Ländern sich darauf <br>vorzubereiten.'")
         font.pixelSize: 15
     }
 
@@ -36,7 +36,7 @@ Rectangle {
     Text {
         id: introductiontext
         x: 451
-        y: 285
+        y: 323
         color: "#ffffff"
         text: qsTr("Als Regierung des Landes Parallos ist es Ihre Aufgabe die Ausbreitung <br>des Coronavirus im Land zu verhindern und einzudämmen.<br>Veranlassen Sie dazu eine Vielzahl von Maßnahmen.
                     <br>Achten Sie dabei aber auf die Auswirkungen der Faktoren")
@@ -51,7 +51,7 @@ Rectangle {
     Button {
         id: continuebutton
         x: 451
-        y: 400
+        y: 415
         text: qsTr("Weiter")
         onClicked: {
             if (state == "welcome") state = "introduction"
@@ -68,6 +68,7 @@ Rectangle {
                 name: "introduction";
                 PropertyChanges { target: welcometext; visible: false }
                 PropertyChanges { target: introductiontext; visible: true }
+                PropertyChanges { target: imagedorsten; visible: false }
             }
         ]
 
