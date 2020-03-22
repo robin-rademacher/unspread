@@ -9,7 +9,6 @@ Rectangle {
     color: "#4c4c4c"
 
     Universal.theme: Universal.Dark
-    Universal.accent: Universal.Violet
 
     Item {
         Timer {
