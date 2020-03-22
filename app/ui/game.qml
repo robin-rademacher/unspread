@@ -311,6 +311,8 @@ Rectangle {
             y: 658
             width: 45
             height: 45
+            highlighted: true
+            Universal.accent: Universal.Steel
             onClicked: {
                 //------------------------------------------------------Time Pause Function
                 if (state == "pause") {
@@ -328,11 +330,13 @@ Rectangle {
                     name: "play"
                     PropertyChanges { target: playimg; visible: true }
                     PropertyChanges { target: pauseimg; visible: false }
+                    PropertyChanges { target: pausebutton; Universal.accent: Universal.Steel }
                 },
                 State {
                     name: "pause";
                     PropertyChanges { target: playimg; visible: false }
                     PropertyChanges { target: pauseimg; visible: true }
+                    PropertyChanges { target: pausebutton; Universal.accent: Universal.Green }
                 }
             ]
 
