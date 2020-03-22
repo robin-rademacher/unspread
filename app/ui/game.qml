@@ -783,7 +783,7 @@ Rectangle {
         width: 40
         height: 40
         fillMode: Image.PreserveAspectFit
-        source: "qrc:/qtquickplugin/images/template_image.png"
+        source: "../assets/images/Alive.png"
     }
 
     Label {
@@ -802,7 +802,7 @@ Rectangle {
         width: 40
         height: 40
         fillMode: Image.PreserveAspectFit
-        source: "qrc:/qtquickplugin/images/template_image.png"
+        source: "../assets/images/Healthy.png"
     }
 
     Label {
@@ -820,7 +820,7 @@ Rectangle {
         width: 40
         height: 40
         fillMode: Image.PreserveAspectFit
-        source: "qrc:/qtquickplugin/images/template_image.png"
+        source: "../assets/images/Infected.png"
     }
 
     Label {
@@ -838,7 +838,7 @@ Rectangle {
         width: 40
         height: 40
         fillMode: Image.PreserveAspectFit
-        source: "qrc:/qtquickplugin/images/template_image.png"
+        source: "../assets/images/Dead.png"
     }
 
     Label {
@@ -856,7 +856,7 @@ Rectangle {
         width: 40
         height: 40
         fillMode: Image.PreserveAspectFit
-        source: "qrc:/qtquickplugin/images/template_image.png"
+        source: "../assets/images/Immune.png"
     }
 
     Label {
@@ -874,7 +874,7 @@ Rectangle {
         width: 40
         height: 40
         fillMode: Image.PreserveAspectFit
-        source: "qrc:/qtquickplugin/images/template_image.png"
+        source: "../assets/images/Börse-Button.png"
     }
 
     Label {
