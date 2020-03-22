@@ -3,7 +3,7 @@ import QtQuick.Controls 2.14
 import QtQuick.Controls.Universal 2.14
 
 Rectangle {
-    width: 734
+    width: 714
     height: 546
     color: "#111111"
 
