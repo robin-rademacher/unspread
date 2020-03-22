@@ -57,7 +57,25 @@ Rectangle {
             }
         }
 
-
+//Dialog Measures
+        Dialog {
+            id: measures
+            title: "Maßnahmen"
+            standardButtons: Dialog.Close
+            modal: false
+            Text {
+                id: dialogmeasures
+                text: qsTr("Hallo Ich bin ein Dialog")
+            }
+            Button{
+                id: measure1
+                x: 0
+                y: 0
+                width: 60
+                height: 40
+                text: "Grenzkontrolle"
+            }
+        }
 
         // Map
 
@@ -78,7 +96,10 @@ Rectangle {
                 y: 329
                 width: 35
                 height: 35
-                //color: "#464646"
+                onClicked: {
+                //------------------------------------------------------Open Measures
+                    measures.open()
+                }
                 Image {
                     id: govbuttonimage
                     x: 0
@@ -103,7 +124,10 @@ Rectangle {
                 y: 232
                 width: 35
                 height: 35
-                text: ""
+                onClicked: {
+                //------------------------------------------------------Open Statistics
+
+                }
                 Image {
                     id: statisticbuttonimage
                     x: 0
@@ -128,7 +152,9 @@ Rectangle {
                 y: 306
                 width: 35
                 height: 35
-                text: ""
+                onClicked: {
+                //------------------------------------------------------Close Harbor Function
+                }
                 Image {
                     id: harborbuttonimage
                     x: 0
@@ -152,7 +178,9 @@ Rectangle {
                 y: 188
                 width: 35
                 height: 35
-                text: ""
+                onClicked: {
+                //------------------------------------------------------Close Aiport Function
+                }
                 Image {
                     id: airport1buttonimage
                     x: 0
@@ -177,6 +205,9 @@ Rectangle {
                 y: 416
                 width: 35
                 height: 35
+                onClicked: {
+                //------------------------------------------------------Close Aiport Function
+                }
                 Image {
                     id: airport2buttonimage
                     x: 0
@@ -274,7 +305,7 @@ Rectangle {
             }
         }
 
-// right Navigation with factors
+// right Navigation with Factors
 
         Rectangle {
             id: factornav
