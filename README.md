@@ -13,6 +13,7 @@ python main.py
 ```
 OR
 ```
-cd app/dist/main
+7z x main.7z
+cd main
 ./main.exe
 ```
