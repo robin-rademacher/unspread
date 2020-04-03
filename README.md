@@ -11,9 +11,3 @@ pip install PySide2
 cd app
 python main.py
 ```
-OR
-```
-7z x main.7z
-cd main
-./main.exe
-```
